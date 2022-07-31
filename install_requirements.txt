@@ -20,3 +20,6 @@ conda install cython
 
 # cd alphAction directory
 pip install -e .    # Other dependicies will be installed here
+
+# Download JRDB dataset
+https://jrdb.erc.monash.edu/
