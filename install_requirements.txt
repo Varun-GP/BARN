@@ -1,0 +1,22 @@
+numpy
+pandas
+#pytorch
+#torchvision
+gym
+tensorflow
+matplotlib
+
+# Spatio-temporal action recognition
+conda create -n alphaction python=3.7
+conda activate alphaction
+
+# install pytorch with the same cuda version as in your environment
+cuda_version=$(nvcc --version | grep -oP '(?<=release )[\d\.]*?(?=,)')
+conda install pytorch=1.4.0 torchvision cudatoolkit=$cuda_version -c pytorch
+# you should check manually if you successfully install pytorch here, there may be no such package for some cuda versions.
+
+conda install av -c conda-forge
+conda install cython
+
+# cd alphAction directory
+pip install -e .    # Other dependicies will be installed here
