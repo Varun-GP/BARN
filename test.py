@@ -17,12 +17,12 @@ def main():
 	# the following parameters will be determined for each test run
 	parser = argparse.ArgumentParser('Parse configuration file')
 	# the model directory that we are testing
-	parser.add_argument('--model_dir', type=str, default='data/example_model')
+	parser.add_argument('--model_dir', type=str, default='data')
 	parser.add_argument('--visualize', default=True, action='store_true')
 	# if -1, it will run 500 different cases; if >=0, it will run the specified test case repeatedly
 	parser.add_argument('--test_case', type=int, default=-1)
 	# model weight file you want to test
-	parser.add_argument('--test_model', type=str, default='27776.pt')
+	parser.add_argument('--test_model', type=str, default='barn-best.pt')
 	test_args = parser.parse_args()
 
 	from importlib import import_module
